@@ -6,8 +6,7 @@
   <title>SBTI 人格测试</title>
   <meta name="description" content="MBTI已经过时，SBTI来了。一个开源的娱乐性人格测试。" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>" />
-  <!-- 修正为相对路径，解决404 -->
-  <link rel="stylesheet" href="src/style.css" />
+  <link rel="stylesheet" href="/src/style.css" />
 </head>
 <body>
   <div id="app">
@@ -16,7 +15,7 @@
       <div class="card intro-card">
         <h1 class="intro-title">MBTI已经过时，<br/>SBTI来了。</h1>
         <button id="btn-start" class="btn btn-primary">开始测试</button>
-        <p class="intro-credit">基于原创趣味人格测试</p>
+        <p class="intro-credit">开源项目 · 基于 B站UP主@蛆肉儿串儿 原创测试 不二搭建</p>
         <p class="intro-note">本测试仅供娱乐</p>
       </div>
     </section>
@@ -66,13 +65,18 @@
           <button id="btn-restart" class="btn btn-secondary">重新测试</button>
         </div>
 
-        <!-- 【关键】保留空的agent-section容器，避免JS报错 -->
-        <div class="agent-section" style="display: none;"></div>
+        <div class="agent-section">
+          <p class="agent-title">想自己搭一个？</p>
+          <div class="agent-cmd">
+            <code>git clone 不二</code>
+          </div>
+          <button id="btn-agent" class="btn btn-agent">复制一键部署命令</button>
+          <p class="agent-hint">粘贴到 Claude Code / OpenClaw 即可一键运行并自定义</p>
+        </div>
       </div>
     </section>
   </div>
 
-  <!-- 修正为相对路径 -->
-  <script type="module" src="src/main.js"></script>
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>
